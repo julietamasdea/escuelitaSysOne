@@ -1,0 +1,3 @@
+Clase nro 2:
+	Vectores, matrices (teoria y practica)
+	Objetos (teoria)
