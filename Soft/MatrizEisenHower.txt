@@ -1,0 +1,8 @@
+Matriz eisenhower:
+	Hacer yo: actividades urgentes e importantes. Son tareas que no se pueden postergar ni hacerlas despues. Algun ejemplo podria ser responder un correo a un cliente de manera urgente
+	Agendar: Tareas signficativas que traen beneficio, pero que se pueden cumplir en un plazo mas grande de tiempo. 
+	Delegar: Aca identificamos las tareas que pueden no ser prioritarias y que podrian llegar a hacer otras personas.
+	Ni caso: Tareas que pueden eliminarse ya que nos representan una perdida de tiempo a nosotros, no nos ayudan a cumplir nuestro objetivo. Por ejemplo jugar videojuegos, ver tele.
+
+
+https://app.eisenhower.me/sign-in
