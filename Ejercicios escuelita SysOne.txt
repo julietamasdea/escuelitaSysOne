@@ -1,3 +1,6 @@
 Clase nro 2:
 	Vectores, matrices (teoria y practica)
 	Objetos, atributos, metodos, herencia (teoria)
+
+Clase nro 3:
+	Clases, herencia (practica)
