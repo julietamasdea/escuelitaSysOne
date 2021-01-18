@@ -4,3 +4,6 @@ Clase nro 2:
 
 Clase nro 3:
 	Clases, herencia (practica)
+	Clase abstracta: no se define la logica de los metodos, se deja que se implemente en otras clases. Permiten enunciar los nombres de los metodos que luego tendran las clases que los implementan.
+	@Override -> Cuando una clase extiende a una clase abstracta, tiene que sobreescribir, con esta anotación, el metodo que no fue implementado en la clase abstracta.
+	Polimorfismo -> Multipes implementaciones de un metodo dentro de la misma clase. 

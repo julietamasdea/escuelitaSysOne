@@ -1,8 +1,10 @@
 package com.mycompany.clasenumerotres.domain;
 
+import java.util.List;
+
 public class Calculos {
     //Procesa todos los alquileres y devuelve el de mayor valor
-    public long mayorAlquiler(Alquiler[] alquileres) {
+    public long mayorAlquiler(List<Alquiler> alquileres) {
         long mayor = 0;
         for (Alquiler a:alquileres) {
             if (mayor < a.calculoAlquiler()) {
@@ -13,7 +15,7 @@ public class Calculos {
     }
 
     //Procesa todos los alquileres y devuelve el de menor valor
-    public long menorAlquiler(Alquiler[] alquileres) {
+    public long menorAlquiler(List<Alquiler> alquileres) {
         long menor = 99999999;
         for (Alquiler a:alquileres) {
             if (menor > a.calculoAlquiler()) {
@@ -28,7 +30,7 @@ public class Calculos {
        la cantidad de alquileres por mes. Luego realiza por cada mes
        la division de los precios por la cantidad
      */
-    public void promedioMensual(Alquiler[] alquileres) {
+    public void promedioMensual(List<Alquiler> alquileres) {
         long[]   promediosMensuales          = {0,0,0,0,0,0,0,0,0,0,0,0};
         int[]    cantidadAlquileresMensuales = {0,0,0,0,0,0,0,0,0,0,0,0};
         String[] meses                       = {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
@@ -49,12 +51,12 @@ public class Calculos {
     }
 
     //Suma todos los precios de todos los alquileres y luego lo divide por el total de alquileres
-    public double promedioAnual(Alquiler[] alquileres) {
+    public double promedioAnual(List<Alquiler> alquileres) {
         int montoTotalAnual = 0;
         for (Alquiler a:alquileres) {
             montoTotalAnual += a.calculoAlquiler();
         }
-        return montoTotalAnual/alquileres.length;
+        return montoTotalAnual/alquileres.size();
     }
 
 //Constructors
