@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Equipo {
+    private int cuit;
     private String nombre;
     private LocalDate fechaFundacion;
     private String nombrePresidente;
@@ -47,11 +48,19 @@ public class Equipo {
         this.directorTecnico = directorTecnico;
     }
 
+    public int getCuit() {
+        return cuit;
+    }
+
+    public void setCuit(int cuit) {
+        this.cuit = cuit;
+    }
+
     public void setJugadores(List<Jugador> jugadores) {
         this.jugadores = jugadores;
     }
 
-    public List getJugadores() {
+    public List<Jugador> getJugadores() {
         return jugadores;
     }
 

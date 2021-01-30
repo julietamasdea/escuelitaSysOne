@@ -1,0 +1,18 @@
+Manifiesto agil (caracteristicas)
+	creada y traida por desarrolladores que buscaba que las tareas y los procesos se hagan de manera mas facil y sencilla
+- Las personas y las interacciones esten antes que los procesos y herramientas
+- Software funcionando antes que documentacion ehaustiva
+- Colaboracion con el cliente antes que el contrato
+- Respuesta ante el cambio antes que ...
+
+¿Que es Scrum?
+	Marco de trabajo de reglas basicas enfocadas a obtener resultados en el corto plazo de manera colaborativa.
+	Buenas practiacs aplicadas para trabajar en equipo que permiten adaptarse rapidamente a los cambios.
+	Se realiza un seguimiento diario, brinda visibilidad, transparencia. Permite feedback continuo con el cliente
+
+Ceremonias:
+- Sprint Planning -> que se va a hacer en un determinado plazo (generalmente 15 dias)
+- Daily meeting -> reuniones diarias
+- Spring review -> se revisa todo lo que se entrego
+- Sprint retrospective -> una vez que ya se entrego se discute como se trabajo y que se puede mejorar.
+

@@ -1,0 +1,9 @@
+com\mycompany\jugadoresfutbol\data\Metodos.class
+com\mycompany\jugadoresfutbol\domain\Persona.class
+com\mycompany\jugadoresfutbol\domain\Dt.class
+com\mycompany\jugadoresfutbol\domain\Equipo.class
+com\mycompany\jugadoresfutbol\data\GeneracionDatos.class
+com\mycompany\jugadoresfutbol\domain\Equipo_Jugador.class
+com\mycompany\jugadoresfutbol\domain\Jugador.class
+com\mycompany\jugadoresfutbol\domain\Direccion.class
+com\mycompany\jugadoresfutbol\test\Main.class
