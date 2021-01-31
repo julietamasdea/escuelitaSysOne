@@ -3,6 +3,8 @@ package com.mycompany.jugadoresfutbol.domain;
 import java.time.LocalDate;
 
 public class Equipo_Jugador {
+    private int dniJugador;
+    private int cuitEquipo;
     private LocalDate fechaInicio;
     private LocalDate fechaFin;
     private String nombreEquipo;
@@ -28,7 +30,32 @@ public class Equipo_Jugador {
         this.posicionCancha = posicionCancha;
     }
 
+    public Equipo_Jugador(int dniJugador, int cuitEquipo, LocalDate fechaInicio, LocalDate fechaFin, String nombreEquipo, String posicionCancha) {
+        this.dniJugador = dniJugador;
+        this.cuitEquipo = cuitEquipo;
+        this.fechaInicio = fechaInicio;
+        this.fechaFin = fechaFin;
+        this.nombreEquipo = nombreEquipo;
+        this.posicionCancha = posicionCancha;
+    }
+
     public Equipo_Jugador() {
+    }
+
+    public int getDniJugador() {
+        return dniJugador;
+    }
+
+    public void setDniJugador(int dniJugador) {
+        this.dniJugador = dniJugador;
+    }
+
+    public int getCuitEquipo() {
+        return cuitEquipo;
+    }
+
+    public void setCuitEquipo(int cuitEquipo) {
+        this.cuitEquipo = cuitEquipo;
     }
 
     public LocalDate getFecha_inicio() {

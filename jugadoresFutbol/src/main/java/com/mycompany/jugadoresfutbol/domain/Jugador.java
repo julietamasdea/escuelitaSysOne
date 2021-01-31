@@ -16,6 +16,10 @@ public class Jugador extends Persona {
     public Jugador() {
     }
 
+    public Jugador(int dni, String nombre, String apellido) {
+        super(dni, nombre, apellido);
+    }
+
     public Jugador(String nombre, String apellido, String email, String club, Integer dni, Integer telefono, Direccion direccion, LocalDate fechaInicio, LocalDate fechaFin, LocalDate fechaNacimiento, LocalDate fechaDebut, int partidosJugados, int goles, Double peso, Double altura, List<Equipo_Jugador> historiaJugador) {
         super(nombre, apellido, email, club, dni, telefono, direccion, fechaInicio, fechaFin);
         this.fechaNacimiento = fechaNacimiento;

@@ -75,35 +75,26 @@ public class EquipoDAO implements IEquipoDAO {
     }
 
     @Override
-    public List<Equipo> select(int cuit) {
+    public List<Equipo> select() {
         Connection conn         = null;
         PreparedStatement stmt  = null;
-        ResultSet rs            = null;
+        ResultSet rs;
+        Equipo equipo;
         List<Equipo> equipos    = new ArrayList<>();
-
         String nombre;
         String categoria;
 
         try {
             conn = ConexionDB.getConnection();
-            if (int != null) {
-                stmt.setInt(1, cuit);
-                stmt = conn.prepareStatement(SQL_SELECT_ID);
-            } else {
-                stmt = conn.prepareStatement(SQL_SELECT);
-            }
+            stmt = conn.prepareStatement(SQL_SELECT);
             rs   = stmt.executeQuery();
             while(rs.next()) {
-                int cuit         = rs.getInt(CUIT);
-                String nombre    = rs.getInt(NOMBRE);
-                String categoria = rs.getInt(CATEGORIA);
+                int cuit     = rs.getInt(CUIT);
+                nombre       = rs.getString(NOMBRE);
+                categoria    = rs.getString(CATEGORIA);
                 equipo = new Equipo(cuit, nombre, categoria);
                 equipos.add(equipo);
             }
-            stmt.setInt(1, equipo.getCuit());
-            stmt.setString(2, equipo.getNombre());
-            stmt.setString(3, equipo.getCategoriaActual());
-            stmt.setInt(4, equipo.getCuit());
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -116,8 +107,41 @@ public class EquipoDAO implements IEquipoDAO {
                 throwables.printStackTrace();
             }
         }
-        return registros;
+        return equipos;
     }
+
+    @Override
+    public Equipo select(int cuit) {
+        Connection conn         = null;
+        PreparedStatement stmt  = null;
+        ResultSet rs            = null;
+        Equipo equipo           = null;
+        String nombre;
+        String categoria;
+
+        try {
+            conn = ConexionDB.getConnection();
+            stmt = conn.prepareStatement(SQL_SELECT_ID);
+            stmt.setInt(1, cuit);
+            rs   = stmt.executeQuery();
+            while(rs.next()) {
+                nombre    = rs.getString(NOMBRE);
+                categoria = rs.getString(CATEGORIA);
+                equipo = new Equipo(cuit, nombre, categoria);
+            }
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        finally {
+            try {
+                ConexionDB.closeConnection(stmt);
+                ConexionDB.closeConnection(conn);
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+        }
+        return equipo;
     }
 
     @Override
@@ -127,7 +151,7 @@ public class EquipoDAO implements IEquipoDAO {
         int registros = 0;
 
         try {
-            conn    = this.conexionTransaccional != null ? this.conexionTransaccional : ConexionDB.getConnection();
+            conn = ConexionDB.getConnection();
             stmt    = conn.prepareStatement(SQL_DELETE);
             stmt.setInt(1, equipo.getCuit());
             registros = stmt.executeUpdate();
@@ -138,9 +162,7 @@ public class EquipoDAO implements IEquipoDAO {
         finally {
             try {
                 ConexionDB.closeConnection(stmt);
-                if (this.conexionTransaccional == null) {
-                    ConexionDB.closeConnection(conn);
-                }
+                ConexionDB.closeConnection(conn);
             } catch (SQLException throwables) {
                 throwables.printStackTrace();
             }

@@ -27,6 +27,12 @@ public class Equipo {
         this.nombre = nombre;
     }
 
+    public Equipo(int cuit, String nombre, String categoriaActual) {
+        this.cuit = cuit;
+        this.nombre = nombre;
+        this.categoriaActual = categoriaActual;
+    }
+
     public Equipo(String nombre, LocalDate fechaFundacion, String nombrePresidente, String apellidoPresidente, Direccion direccion, ArrayList<Integer> telefonos, LocalDate fechaInicioPrimeraDivision, LocalDate fechaFinPrimeraDivision, String categoriaActual) {
         this.jugadores = new ArrayList();
         this.nombre = nombre;

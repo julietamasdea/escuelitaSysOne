@@ -7,6 +7,7 @@ import java.util.List;
 public interface IEquipoDAO {
     int update(Equipo equipo);
     int insert(Equipo equipo);
-    List<Equipo> select(int cuit);
+    List<Equipo> select();
+    Equipo select(int cuit);
     int delete(Equipo equipo);
 }
