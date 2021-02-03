@@ -14,4 +14,8 @@ public interface IJugadorService {
     Jugador convertDto(JugadorDto jugadorDto);
     JugadorDto convertModel(Jugador jugador);
     List<JugadorDto> convertModel(List<Jugador> jugadores);
+    void agregarJugador(JugadorDto jugadorDto);
+    void modificarJugador(JugadorDto jugadorDto);
+    List<JugadorDto> seleccionarJugadores();
+
 }

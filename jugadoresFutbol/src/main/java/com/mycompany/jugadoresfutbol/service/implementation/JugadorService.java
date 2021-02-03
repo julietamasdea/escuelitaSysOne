@@ -1,5 +1,8 @@
 package com.mycompany.jugadoresfutbol.service.implementation;
 
+import com.mycompany.jugadoresfutbol.data.implementation.EquipoDAO;
+import com.mycompany.jugadoresfutbol.data.implementation.JugadorDAO;
+import com.mycompany.jugadoresfutbol.domain.Equipo;
 import com.mycompany.jugadoresfutbol.domain.Jugador;
 import com.mycompany.jugadoresfutbol.dto.EquipoDto;
 import com.mycompany.jugadoresfutbol.dto.Equipo_JugadorDto;
@@ -12,6 +15,7 @@ import java.util.List;
 
 public class JugadorService implements IJugadorService {
     private Equipo_JugadorService equipoJugadorService = new Equipo_JugadorService();
+    private JugadorDAO jugadorDao = new JugadorDAO();
 
     public boolean estaEntreFechas(JugadorDto jugador, LocalDate fecha) {
         List<Equipo_JugadorDto> historial = jugador.getHistoriaJugador();
@@ -79,5 +83,22 @@ public class JugadorService implements IJugadorService {
             jugadoresDto.add(convertModel(jugador));
         }
         return jugadoresDto;
+    }
+
+    @Override
+    public void agregarJugador(JugadorDto jugadorDto) {
+        Jugador jugador = convertDto(jugadorDto);
+        jugadorDao.insert(jugador);
+    }
+
+    @Override
+    public void modificarJugador(JugadorDto jugadorDto) {
+        Jugador jugador = convertDto(jugadorDto);
+        jugadorDao.update(jugador);
+    }
+
+    @Override
+    public List<JugadorDto> seleccionarJugadores() {
+        return convertModel(this.jugadorDao.select());
     }
 }
