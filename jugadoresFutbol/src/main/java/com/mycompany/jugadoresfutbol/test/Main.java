@@ -2,7 +2,11 @@ package com.mycompany.jugadoresfutbol.test;
 
 
 import com.mycompany.jugadoresfutbol.data.*;
+import com.mycompany.jugadoresfutbol.data.implementation.GeneracionDatos;
 import com.mycompany.jugadoresfutbol.domain.*;
+import com.mycompany.jugadoresfutbol.service.implementation.EquipoService;
+import com.mycompany.jugadoresfutbol.service.interfaces.IEquipoService;
+import com.mycompany.jugadoresfutbol.service.interfaces.IEquipo_JugadorService;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -13,19 +17,20 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        /*
+
         GeneracionDatos generacionDatos = new GeneracionDatos();
-        Metodos metodos = new Metodos();
+        EquipoService equipoService = new EquipoService();
         LocalDate fecha = LocalDate.of(2014,05,12);
         for (String i : generacionDatos.equipos.keySet()) {
+            equipoService.cantidadJugadoresEnFecha(fecha, generacionDatos.equipos.get(i));
             System.out.println("Equipo: " + i + ", cantidad jugadores en la fecha "
-                  + fecha + ": " + metodos.cantidadJugadoresEnFecha(fecha, generacionDatos.equipos.get(i))
-            + ", defensores: " + metodos.cantidadDefensoresEquipo(generacionDatos.equipos.get(i)));
+                  + fecha + ": " + equipoService.cantidadJugadoresEnFecha(fecha, generacionDatos.equipos.get(i))
+            + ", defensores: " + equipoService.cantidadJugadoresEnFecha(fecha, generacionDatos.equipos.get(i)));
 
         }
 
-         */
-        conexionBD();
+
+        //conexionBD();
     }
     public static void conexionBD() {
         //equipo ¡¡¡Descomentar para probar!!!

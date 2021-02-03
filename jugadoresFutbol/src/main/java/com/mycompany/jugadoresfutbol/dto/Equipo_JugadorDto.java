@@ -1,8 +1,8 @@
-package com.mycompany.jugadoresfutbol.domain;
+package com.mycompany.jugadoresfutbol.dto;
 
 import java.time.LocalDate;
 
-public class Equipo_Jugador {
+public class Equipo_JugadorDto {
     private int dniJugador;
     private int cuitEquipo;
     private LocalDate fechaInicio;
@@ -10,14 +10,14 @@ public class Equipo_Jugador {
     private String nombreEquipo;
     private String posicionCancha;
 
-    public Equipo_Jugador(LocalDate fechaInicio, LocalDate fechaFin, String nombreEquipo, String posicionCancha) {
+    public Equipo_JugadorDto(LocalDate fechaInicio, LocalDate fechaFin, String nombreEquipo, String posicionCancha) {
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
         this.nombreEquipo = nombreEquipo;
         this.posicionCancha = posicionCancha;
     }
 
-    public Equipo_Jugador(int dniJugador, int cuitEquipo, LocalDate fechaInicio, LocalDate fechaFin, String nombreEquipo, String posicionCancha) {
+    public Equipo_JugadorDto(int dniJugador, int cuitEquipo, LocalDate fechaInicio, LocalDate fechaFin, String nombreEquipo, String posicionCancha) {
         this.dniJugador = dniJugador;
         this.cuitEquipo = cuitEquipo;
         this.fechaInicio = fechaInicio;
@@ -26,7 +26,7 @@ public class Equipo_Jugador {
         this.posicionCancha = posicionCancha;
     }
 
-    public Equipo_Jugador() {
+    public Equipo_JugadorDto() {
     }
 
     public int getDniJugador() {
