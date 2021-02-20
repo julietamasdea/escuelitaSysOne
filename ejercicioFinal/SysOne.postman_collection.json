@@ -1,0 +1,542 @@
+{
+	"info": {
+		"_postman_id": "2b6a57da-47b6-4213-a859-d851c9eb19f5",
+		"name": "SysOne",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Jugador",
+			"item": [
+				{
+					"name": "jugador/",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "cuit",
+								"value": "18349",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "dni",
+								"value": "1349781",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/jugador/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jugador",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "jugador/{dni}",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "cuit",
+								"value": "18349",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "dni",
+								"value": "1349781",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/jugador/3917291",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jugador",
+								"3917291"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "jugador/",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "cuit",
+								"value": "18349",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "dni",
+								"value": "1349781",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dni\": 9234713,\r\n    \"nombre\": \"LUCIA\",\r\n    \"apellido\": \"ROMINEZ\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/jugador/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jugador",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "jugador/{dni}",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "cuit",
+								"value": "18349",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "dni",
+								"value": "1349781",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dni\": 9234713,\r\n    \"nombre\": \"LUCIA\",\r\n    \"apellido\": \"ROMINES\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/jugador/9234713",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jugador",
+								"9234713"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "jugador/delete/{dni}",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "cuit",
+								"value": "18349",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "dni",
+								"value": "1349781",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/jugador/delete/9234713",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jugador",
+								"delete",
+								"9234713"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Equipo",
+			"item": [
+				{
+					"name": "equipo/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/equipo/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"equipo",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "equipo/jugadores/{cuit}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/equipo/jugadores/18349?fecha=2016-04-20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"equipo",
+								"jugadores",
+								"18349"
+							],
+							"query": [
+								{
+									"key": "fecha",
+									"value": "2016-04-20"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "equipo/defensores/{cuit}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/equipo/defensores/58927",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"equipo",
+								"defensores",
+								"58927"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "equipo/{cuit}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/equipo/58927",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"equipo",
+								"58927"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "equipo/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cuit\": 18402,\r\n    \"nombre\": \"ESTUDIANTES\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/equipo/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"equipo",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "equipo/{cuit}",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cuit\": 18402,\r\n    \"nombre\": \"GIMNASIA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/equipo/18402",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"equipo",
+								"18402"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "equipo/delete/{cuit}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/equipo/delete/18402",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"equipo",
+								"delete",
+								"18402"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Historia",
+			"item": [
+				{
+					"name": "historia/",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/historia/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"historia",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "historia/{id}",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/historia/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"historia",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "historia/",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fechaInicio\": \"2005-01-01\",\r\n    \"fechaFin\": \"2009-12-31\",\r\n    \"nombreEquipo\": \"RIVER\",\r\n    \"posicionCancha\": \"DEFENSOR\",\r\n    \"equipo\": {\r\n        \"id\": 1\r\n    },\r\n    \"jugador\": {\r\n        \"id\": 2\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/historia/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"historia",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "historia/{id}",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fechaInicio\": \"2003-02-01\",\r\n    \"fechaFin\": \"2009-12-31\",\r\n    \"nombreEquipo\": \"RIVER\",\r\n    \"posicionCancha\": \"DEFENSOR\",\r\n    \"equipo\": {\r\n        \"id\": 1\r\n    },\r\n    \"jugador\": {\r\n        \"id\": 2\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/historia/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"historia",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "historia/delete/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/historia/delete/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"historia",
+								"delete",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
