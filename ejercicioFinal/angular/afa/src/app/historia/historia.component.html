@@ -1,0 +1,29 @@
+<div class="card bg-light mb-3">
+  <div class="card-body">
+    <h5 class="card-title">Historias</h5>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>FechaInicio</th>
+          <th>FechaFin</th>
+          <th>NombreEquipo</th>
+          <th>PosicionCancha</th>
+          <th>Equipo</th>
+          <th>Jugador</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let historia of historias">
+          <td>{{historia.id}}</td>
+          <td>{{historia.fechaInicio}}</td>
+          <td>{{historia.fechaFin}}</td>
+          <td>{{historia.nombreEquipo}}</td>
+          <td>{{historia.posicionCancha}}</td>
+          <td>{{historia.equipo.cuit}}</td>
+          <td>{{historia.jugador.dni}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

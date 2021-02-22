@@ -4,5 +4,5 @@ INSERT INTO equipo (cuit,nombre,fecha_fundacion,nombre_presidente,apellido_presi
 INSERT INTO jugador (dni,nombre,apellido,email,club,numero,calle,localidad,provincia,telefono,fecha_inicio,fecha_nacimiento,fecha_debut,partidos_jugados,goles,peso,altura) VALUES ('3917291','MARIANITO','SOLEST','MARIANITO.SOLEST@GMAIL.COM','2','34','1','SANTA ROSA','CORDOBA','51254123','2000-01-01','1990-11-21','2001-02-10','100','1','70','1.75');
 INSERT INTO jugador (dni,nombre,apellido,email,club,numero,calle,localidad,provincia,telefono,fecha_inicio,fecha_nacimiento,fecha_debut,partidos_jugados,goles,peso,altura) VALUES ('1349781','SOLCITO','REY','SOLCITO.REY@GMAIL.COM','1','1','2','MATANZA','BUENOS AIRES','12315261','2004-02-11','1992-05-15','2005-09-17','12','1','80','1.80');
 
-INSERT INTO historia (fecha_inicio,fecha_fin,nombre_equipo,posicion_cancha,id_equipo,id_jugador) VALUES ('2010-01-01','2020-02-03','RIVER','DEFENSOR','1','1');
+INSERT INTO historia (fecha_inicio,fecha_fin,nombre_equipo,posicion_cancha,id_equipo,id_jugador) VALUES ('2010-01-01','2022-02-03','RIVER','DEFENSOR','1','1');
 INSERT INTO historia (fecha_inicio,fecha_fin,nombre_equipo,posicion_cancha,id_equipo,id_jugador) VALUES ('2015-07-08','2016-06-10','BOCA','DEFENSOR','2','2');

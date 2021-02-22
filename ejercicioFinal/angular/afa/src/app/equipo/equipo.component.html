@@ -1,0 +1,21 @@
+<div class="card bg-light mb-3">
+  <div class="card-body">
+    <h5 class="card-title">Equipos</h5>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Nombre</th>
+          <th>Cuit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let equipo of equipos">
+          <td>{{equipo.id}}</td>
+          <td>{{equipo.nombre}}</td>
+          <td>{{equipo.cuit}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
